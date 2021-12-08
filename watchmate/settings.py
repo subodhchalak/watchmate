@@ -16,6 +16,7 @@ from datetime import timedelta                              # for JSON Web Token
 
 import os
 import environ
+import django_heroku
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -196,3 +197,7 @@ SIMPLE_JWT = {
     'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
     'ROTATE_REFRESH_TOKENS': False,
 }
+
+
+
+django_heroku.settings(locals())
